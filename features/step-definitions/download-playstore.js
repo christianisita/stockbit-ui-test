@@ -35,3 +35,7 @@ Then('A new tab would open with stockbit\'s url playstore on it', async () => {
     driver.close();                                
     expect(url).to.eql("https://play.google.com/store/apps/details?id=com.stockbit.android&hl=en")    
 })
+
+AfterAll( async () => {
+    await driver.quit()
+})
